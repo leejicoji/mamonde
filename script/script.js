@@ -126,12 +126,38 @@ $(function () {
 
   $(".products ul li").hover(
     function () {
-      // 마우스를 올렸을 때
-      $(this).find(".click_product, .hover_tag").stop().fadeIn();
+      if ($(window).width() > 1024) { // PC 전용 (1025px 이상에서만 실행)
+        $(this).find(".click_product, .hover_tag").stop().fadeIn();
+      }
     },
     function () {
-      // 마우스를 뗐을 때
-      $(this).find(".click_product, .hover_tag").stop().fadeOut();
+      if ($(window).width() > 1024) { // PC 전용
+        $(this).find(".click_product, .hover_tag").stop().fadeOut();
+      }
+    }
+  );
+
+  const $cursor = $("#cursor");
+  const $clickText = $("#clickText");
+
+  // 마우스 이동 → 꽃 이미지와 Click! 위치 항상 중앙
+  $(document).on("mousemove", function (e) {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    $cursor.css({ left: x + "px", top: y + "px" });
+    $clickText.css({ left: x + "px", top: y + "px" });
+  });
+
+  // 클릭 가능한 요소 hover
+  $("a, button, .clickable").hover(
+    function () {
+      // 점점 나타나기
+      $clickText.stop(true, true).fadeTo(300, 1); // 0.3초 동안 opacity 1
+    },
+    function () {
+      // 점점 사라지기
+      $clickText.stop(true, true).fadeTo(300, 0); // 0.3초 동안 opacity 0
     }
   );
 });
