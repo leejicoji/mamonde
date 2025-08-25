@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* @font-face {
+    font-family: "Pretendard", "Arita Dotum", "Helvetica Neue", sans-serif;
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+li { list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; vertical-align: top; height: auto; }
+button { cursor: pointer; }
+body { background-color: #fff; color: #000; }
+
+
+.header_basic { width: 100%; height: 70px; display: flex; background-color: #fff; border-bottom: 1px solid #ddd; justify-content: space-between; padding: 20px 120px; position: relative; z-index: 9999; align-items: start; } /* pos:r 이랑 z9999로 맨 앞으로 끌고 옴 */
+.header_basic h1 img { width: 200px; }
+.header_basic ul { display: flex; }
+
+.t_menu { width: 100%; height: 70px; display: flex; justify-content: space-between; padding: 0 20px; padding-top: 20px; background-color: #fff; }
+.t_side { width: 40px; }
+.t_menu h1 { width: 200px; }
+.t_search { margin-top: -20px; }
+.t_search img { width: 60px; }
+
+.top_menu { width: 30%; display: flex; justify-content: space-between; }
+.top_menu>li { height: 50px; font-size: 20px; font-weight: bold; }
+.top_menu>li:hover {  border-bottom: 3px solid #FCCC00; }
+
+.sub_wrap { width: 100%; height: 350px; background-color: #fff; position: absolute; left: 0; top: 70px; }
+.sub_menu { width: 1200px; margin: auto; }
+.sub_title { width: 1200px; display: flex; }
+.sub_title h2 { font-size: 15px; margin: 20px 0; }
+.sub_title img { width: 7px; height: 12px; margin: 25px 5px; }
+.sub_sub { display: flex; }
+.top_menu>li:nth-child(odd) .sub_wrap { display: none; }
+.top_menu>li:first-child .sub_list { margin-top: 25px; }
+.top_menu>li:first-child h3 { margin-bottom: 30px; }
+
+.sub_img1 { width: 550px; height: 230px; padding: 0 20px; margin-top: 20px; border-left: 1px solid #ccc; }
+.sub_img1 img { width: 510px; }
+.sub_img1 p { font-size: 15px; margin-top: 10px; }
+
+.sub_list_wrap { width: 800px; height: 200px; font-size: 15px; display: flex; }
+.sub_list { width: 100%; font-size: 15px; }
+.sub_list:nth-child(even) { margin-top: 20px; }
+.sub_list h3 { font-size: 15px; }
+.sub_list ul { display:list-item; list-style: none; font-weight: bold; }
+.sub_list ul li { font-size: 15px; font-weight: normal; line-height: 30px; }
+.sub_img { width: 400px; padding: 0 20px; border-left: 1px solid #ccc; }
+.sub_img img { width: 360px; }
+.sub_img p { font-size: 15px; margin-top: 10px; }
+
+.right_menu { width: 15%; display: flex; justify-content: space-between; align-items: center; margin-top: -10px; }
+.right_menu li { font-weight: bold; font-size: 20px; }
+.right_menu img { background-color: #fff; }
+
+/* slide */
+.slide { width: 100%; height: 1080px; position: relative; }
+.slide_img ul { width: 300%; height: 1080px; display: flex; }
+.slide_img ul li { width: 33.3%; height: 1080px; }
+.slide_img ul li:nth-child(1) { background: url(../images/main_slide1.png) center/cover; }
+.slide_img ul li:nth-child(2) { background: url(../images/main_slide2.jpg) center/cover; }
+.slide_img ul li:nth-child(3) { background: url(../images/main_slide3.jpg) center/cover; }
+.slide_img ul li h1 { font-size: 45px; margin-top: 400px; margin-left: 130px; }
+.slide_img ul li p { font-size: 20px; margin-top: 20px; margin-left: 130px; }
+.slide_img ul li button { font-size: 18px; margin-top: 20px; margin-left: 130px; width: 10%; height: 40px; background-color: transparent; border: 1px solid #000; }
+
+.bar_wrap { width: 30%; height: 7px; position: absolute; top: 700px; margin-left: 130px; }
+.slide_bar { width: 120%; height: 7px; position: relative; }
+.slide_bar ul { width: 100%; height: 7px; display: flex; border: 1px solid #000; }
+.slide_bar ul li { width: 33.3%; height: 7px; }
+.slide_bar ul li:first-child { background-color: #000; }
+.slide_bar_bt { position: absolute; left: 100%; top: -7px; width: 100px; height: 10px; }
+
+/* .slide_arrow {  } */
+.slide_left { position: absolute; top: 50%; }
+.slide_right { position: absolute; top: 50%; right: 0; }
+
+/* video_wrap */
+.video_wrap { width: 100%; margin: auto; text-align: center; }
+.video_txt { width: 100%; height: 400px; padding-top: 100px; }
+.video_txt h1 { font-size: 44px; }
+.video_txt h1 img { padding-top: 15px; }
+.video_txt button { font-size: 17px; margin-top: 50px; width: 13%; height: 50px; background-color: transparent; border: 1px solid #000; }
+video { width: 100%; }
+
+/* ani_page */
+.ani_page { background: url(../images/ani_page.jpg) center/cover; width: 100%; height: 900px; text-align: center; color: #fff; }
+/* .ani_box { background-color: #3333335d; width: 100%; height: 900px; } */
+.ani_box { width: 100%; height: 100%; background-color: #00000048; overflow: hidden; }
+.ani_page h1 { font-size: 50px; margin-top: 350px; }
+.ani_page h2 { font-size: 30px; margin-top: 20px; }
+.ani_page button { font-size: 18px; margin-top: 20px; width: 13%; height: 50px; background-color: transparent; border: 1px solid #fff; color: #fff; }
+
+/* products */
+.products { width: 80%; height: 600px; margin: 0 auto; text-align: center; }
+.products h1 { font-size: 40px; width: 100%; margin-top: 200px; margin-bottom: 30px; }
+.products ul { display: flex; }
+.products ul li { position: relative; margin-right: 30px; line-height: 30px; }
+.products ul li:last-child { margin-right: none; }
+.click_product { position: absolute; left: 0; display: none; }
+.tag { margin-top: 20px; font-size: 18px; }
+.products ul li h3 { font-size: 22px; }
+.infor { font-size: 18px; }
+.explain { font-size: 12px; }
+
+/* footer */
+footer { width: 100%; margin-top: 170px; padding-top: 50px; border-top: 1px solid #000; display: flex; justify-content: space-between; }
+.footer_left { width: 40%; margin-left: 150px; }
+.footer_sns { width: 160px; height: 33px; display: flex; margin-bottom: 30px; }
+.footer_sns li { margin-right: 20px; }
+.footer_sns li:last-child { margin-right: none; }
+/* .footer_sns li img {  } */
+
+.footer_bottom { display: flex; font-size: 12px; }
+.footer_bottom li { line-height: 12px; margin-right: 10px; padding-right: 10px; border-right: 1px solid #aaa; }
+.footer_bottom li:last-child { border-right: none; }
+
+.footer_atc { font-size: 12px; margin-top: 13px; position: relative; }
+/* .service {  } */
+.footer_atc img { width: 70px; position: absolute; left: 400px; top: 20px; }
+.copyright { margin-top: 40px; }
+
+.language { width: 180px; height: 40px; padding-left: 10px; }
+
+.btn_top { position: relative; }
+.top_icon { border: none; position: absolute; right: 0; top: -350px; }
+
+/* 모바일 */
+@media all and (min-width:320px) {
+
+}
+
+/* 태블릿 */
+@media all and (min-width:768px) {
+/*     .t_menu { width: 100%; height: 70px; display: flex; justify-content: space-between; padding: 0 20px; padding-top: 20px; background-color: #fff; }
+    .t_side { width: 40px; }
+    .t_menu h1 { width: 200px; }
+    .t_search { margin-top: -20px; }
+    .t_search img { width: 60px; }
+    header { display: none; }
+
+    .slide { width: 100%; height: 1334px; position: relative; }
+    .slide_img ul { width: 300%; height: 1334px; display: flex; }
+    .slide_img ul li { width: 33.33%; height: 1334px; }
+    .slide_img ul li:nth-child(1) { background: url(../images/t_slide1.jpg) center/cover; }
+    .slide_img ul li:nth-child(2) { background: url(../images/t_slide2.jpg) center/cover; }
+    .slide_img ul li:nth-child(3) { background: url(../images/t_slide3.jpg) center/cover; }
+    
+    .slide_img ul li h1 { font-size: 45px; margin-top: 800px; margin-left: 50px; }
+    .slide_img ul li p { font-size: 20px; margin-top: 20px; margin-left: 50px; }
+    .slide_img ul li button { font-size: 15px; margin-top: 30px; margin-left: 50px; width: 20%; height: 40px; background-color: transparent; border: 1px solid #000; }
+
+    .bar_wrap { width: 85%; height: 7px; position: absolute; top: 1100px; left: 5%; border: 1px solid #000; }
+    .slide_bar { width: 120%; height: 7px; position: relative; }
+    .slide_bar ul { width: 100%; height: 7px; }
+    .slide_bar ul li { width: 33.33%; height: 7px; }
+    .slide_bar ul li:first-child { background-color: #000; }
+    .slide_bar_bt { position: absolute; left: 85%; top: -7px; }
+
+    .slide_arrow { display: none; }
+
+    .video_wrap { width: 100%; margin: auto; text-align: center; }
+    .video_txt { width: 100%; height: 400px; padding-top: 100px; }
+    .video_txt h1 { font-size: 44px; }
+    .video_txt h1 img { padding-top: 15px; }
+    .video_txt button { font-size: 17px; margin-top: 50px; width: 30%; height: 50px; background-color: transparent; border: 1px solid #000; }
+    video { width: 100%; } */
+}
+
+/* 웹 */
+@media all and (min-width:1024px) {
+    
+}
+
+
+/* 250801
+    헤더 부분 서브메뉴 넣기
+    헤더 메뉴:호버 노란 bdb
+    반응형 구조 파악하기
+    메인 슬라이드랑 제품쪽 슬라이드 좌우 클릭버튼 넣기
+    메인 슬라이드 두 번째 제품에 *, ** 설명 전부 기입하기(포지션?)
+    폰트 정리하기
+    폰트패밀리, 폰트사이즈, 폰트컬러 다 정리해야 됨
+    제이쿼리 효과 맥락 줄글로 정리하기
+    푸터 랭귀지 css까지 정리하기
+    000한 태그안에 pos:r이랑 pos:a 동시에 들어가도 되는지?000 
+    Pretendard, "Arita Dotum", "Helvetica Neue", sans-serif
+    오른쪽 누르면 한 번에 상단으로 이동 가능한 img 만들기
+    제품 호버시에 제품 제형 사진이 올라오고 해시태그 설명 붙는 텍스트 넣기 */
