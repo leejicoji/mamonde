@@ -160,4 +160,10 @@ $(function () {
       $clickText.stop(true, true).fadeTo(300, 0); // 0.3초 동안 opacity 0
     }
   );
+  $(document).ready(function(){
+    $('.top_icon').click(function(e){
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+  });
 });
